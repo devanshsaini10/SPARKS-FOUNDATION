@@ -4,16 +4,16 @@
 #### TASK 1: Prediction using Supervised Machine Learning
 ##### Objective: Predict the percentage of a student based on the no. of study hours
 ----------------------------------------------------------------------------------------
-View(STUDENT_SCORES)
+#### To import data set 
 > library(readxl)
 > STUDENT_SCORES <- read_excel("D:/DESKTOP/STUDENT SCORES.xlsx")
+#### To view the data in R
 > View(STUDENT_SCORES)
+#### To attach the data 
 > attach(STUDENT_SCORES)
-The following objects are masked from STUDENT_SCORES (pos = 3):
-
-    Hours, Scores
-
+#### To Summarize the data
 > summary(STUDENT_SCORES)
+
      Hours           Scores     
  Min.   :1.100   Min.   :17.00  
  1st Qu.:2.700   1st Qu.:30.00  
@@ -21,8 +21,12 @@ The following objects are masked from STUDENT_SCORES (pos = 3):
  Mean   :5.012   Mean   :51.48  
  3rd Qu.:7.400   3rd Qu.:75.00  
  Max.   :9.200   Max.   :95.00  
+
+#### To Call out variable names
 > names(STUDENT_SCORES)
 [1] "Hours"  "Scores"
+
+
 > mod <- lm(Scores~Hours)
 > summary(mod)
 
